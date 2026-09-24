@@ -1,10 +1,10 @@
-pip install -q langgrap langchain langchain_openai 
 
-from langchain_openai import ChatOpenAi
-from langgraph.Graph import StateGraph
+
+from langchain_openai import ChatOpenAI
+from langgraph.graph import StateGraph
 
 def ask_question(State):
-    llm=ChatOpenAi(model="gpt-4o-mini",api_key="your_api_key_here")
+    llm=ChatOpenAI(model="gpt-4o-mini",api_key="your_api_key_here")
     response=llm.invoke("give me one motivational quote")
     return{"output":response.content}
 
